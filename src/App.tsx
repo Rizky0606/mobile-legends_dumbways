@@ -32,9 +32,9 @@ const App = () => {
   };
 
   const handleSearchHero = () => {
-    // const keywordLower = keyword.toLowerCase();
+    const keywordLower = keyword.toLowerCase();
     const filteringHero = data.filter((hero: DataHero) => {
-      return hero.hero_name.toLowerCase().includes(keyword);
+      return hero.hero_name.toLowerCase().includes(keywordLower);
     });
 
     setFilteredHero(filteringHero);
