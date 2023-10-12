@@ -38,7 +38,6 @@ const App = () => {
     });
 
     setFilteredHero(filteringHero);
-    console.log(filteringHero);
   };
 
   const handleResetInput = () => {
@@ -63,6 +62,9 @@ const App = () => {
             className="input input-bordered w-full max-w-xs mx-5"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
+            onKeyDown={(e) => {
+              e.key === "Enter" ? handleSearchHero() : <></>;
+            }}
           />
           <button
             className="btn btn-outline btn-primary mx-5"
